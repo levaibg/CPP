@@ -1,12 +1,12 @@
 NAME = Animal
 CC = g++
 SRC = main.cpp\
-	Animal.cpp\
+	AAnimal.cpp\
 	Dog.cpp\
 	Cat.cpp\
 	Brain.cpp
 
-CFLAGS = -Werror -Wall -Wextra -std=c++98 -g
+CFLAGS = -Werror -Wall -Wextra -std=c++98
 
 OBJ = $(SRC:.cpp=.o)
 

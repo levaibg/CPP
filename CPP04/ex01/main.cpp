@@ -26,9 +26,9 @@ int main()
 		delete animals[i];
 
 	std::cout << "\n--- Deep copy test ---\n" << std::endl;
-	Dog basic;
-	Dog copy (basic);
-	Dog assign;
+	Cat basic;
+	Cat copy (basic);
+	Cat assign;
 	assign = basic;
 	std::cout << "Basic address: " << &basic << std::endl;
 	std::cout << "Copy address: " << &copy << std::endl;

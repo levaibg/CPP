@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	std::cout << "Cat construcotr called" << std::endl;
 	_type = "Cat";
@@ -13,10 +13,17 @@ Cat::~Cat()
 	std::cout << "Cat destrucor called" << std::endl;
 }
 
-Cat::Cat(const Cat &other) : Animal()
+Cat::Cat(const Cat &other) : AAnimal()
 {
-	std::cout << "Cat copy construcotr called" << std::endl;
-	*this = other;
+	std::cout << "AAnimal construcotr copy called" << std::endl;
+	if(this != &other)
+	{
+		_type = other._type;
+		if (other.brain)
+			delete other.brain;
+		else
+			this->brain = other.brain;
+	}
 }
 
 Cat &Cat::operator=(const Cat &other)
