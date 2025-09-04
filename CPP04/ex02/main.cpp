@@ -4,7 +4,7 @@
 
 int main()
 {
-	// AAnimal f; 
+	// AAnimal f; // -> Ne doit pas compiler
 
 	AAnimal* dog = new Dog();
 	AAnimal* cat = new Cat();
@@ -16,5 +16,4 @@ int main()
 	delete cat;
 
 	return 0;
-
 }

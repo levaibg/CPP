@@ -6,12 +6,12 @@ Brain::Brain()
 	{
 		_ideas[i] = "hmmm, Hamburger";
 	}
-	std::cout << "Brain construcotr called" << std::endl;
+	std::cout << "Brain constructor called" << std::endl;
 }
 
 Brain::~Brain()
 {
-	std::cout << "Brain destrucor called" << std::endl;
+	std::cout << "Brain destructor called" << std::endl;
 }
 
 Brain::Brain(const Brain &other)

@@ -13,7 +13,7 @@ AAnimal::~AAnimal()
 
 AAnimal::AAnimal(const AAnimal &other)
 {
-	std::cout << "AAnimal copy construcotr called" << std::endl;
+	std::cout << "AAnimal copy constructor called" << std::endl;
 	*this = other;
 }
 

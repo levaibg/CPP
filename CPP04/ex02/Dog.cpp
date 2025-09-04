@@ -9,12 +9,12 @@ Dog::Dog() : AAnimal()
 Dog::~Dog()
 {
 	delete this->brain;
-	std::cout << "DOG deconstrucotr called" << std::endl;
+	std::cout << "DOG destructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &other) : AAnimal(), brain(NULL)
 {
-	std::cout << "Dog copy construcotr called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 	*this = other;
 }
 Dog& Dog::operator=(const Dog &other)
