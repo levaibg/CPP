@@ -13,7 +13,7 @@ Cat::~Cat()
 	std::cout << "Cat destrucor called" << std::endl;
 }
 
-Cat::Cat(const Cat &other) : AAnimal()
+Cat::Cat(const Cat &other) : AAnimal(), brain(NULL)
 {
 	std::cout << "AAnimal construcotr copy called" << std::endl;
 	if(this != &other)
