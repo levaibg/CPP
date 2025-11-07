@@ -1,34 +1,14 @@
 #include "iter.hpp"
 
-class Awesome
+void	funct(int a)
 {
-public:
-	Awesome(void) : _n(42) { return; }
-	int get(void) const { return this->_n; }
-private:
-	int _n;
-};
-
-std::ostream &operator<<(std::ostream &o, Awesome const &rhs)
-{
-	o << rhs.get();
-	return o;
+	std::cout << "Fonction !" << a << std::endl;
 }
 
-template<typename T>
-void print(T const &x)
+int main()
 {
-	std::cout << x << std::endl;
-	return;
-}
-
-int main(void)
-{
-	int tab[] = {0, 1, 2, 3, 4};
-	Awesome tab2[5];
-
-	iter(tab, 5, print);
-	iter(tab2, 5, print);
-
-	return 0;
+	int a[] = {1, 2, 3, 4, 5};
+	
+	iter(a, 5, funct);
+	
 }
