@@ -7,7 +7,7 @@ Dog::Dog() : Animal()
 }
 Dog::~Dog()
 {
-	std::cout << "DOG deconstrucotr called" << std::endl;
+	std::cout << "DOG deconstructor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog &other)
@@ -18,7 +18,7 @@ Dog& Dog::operator=(const Dog &other)
 
 Dog::Dog(const Dog &other) : Animal()
 {
-	std::cout << "Dog copy construcotr called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 	*this = other;
 }
 

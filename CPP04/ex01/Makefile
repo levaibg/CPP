@@ -1,5 +1,5 @@
 NAME = Animal
-CC = g++
+CC = c++
 SRC = main.cpp\
 	Animal.cpp\
 	Dog.cpp\

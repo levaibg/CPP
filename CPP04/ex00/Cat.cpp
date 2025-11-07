@@ -2,7 +2,7 @@
 
 Cat::Cat() : Animal()
 {
-	std::cout << "Cat construcotr called" << std::endl;
+	std::cout << "Cat constructor called" << std::endl;
 	_type = "Cat";
 }
 
@@ -13,7 +13,7 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &other) : Animal()
 {
-	std::cout << "Animal construcotr copy called" << std::endl;
+	std::cout << "Animal constructor copy called" << std::endl;
 	*this = other;
 }
 

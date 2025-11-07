@@ -1,6 +1,6 @@
 
 NAME = Unnecessary_violence
-CC = g++
+CC = c++
 SRC = main.cpp\
 	HumanA.cpp\
 	HumanB.cpp\

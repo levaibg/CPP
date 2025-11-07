@@ -28,7 +28,7 @@ Cat::Cat(const Cat &other) : AAnimal(), brain(NULL)
 
 Cat &Cat::operator=(const Cat &other)
 {
-	 if (this != &other)
+	if (this != &other)
     {
         _type = other._type;
         if (this->brain)

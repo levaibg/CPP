@@ -1,6 +1,6 @@
 
 NAME = getliner
-CC = g++
+CC = c++
 SRC = main.cpp
 
 CFLAGS = -Werror -Wall -Wextra -std=c++98

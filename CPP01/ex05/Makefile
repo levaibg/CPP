@@ -1,5 +1,5 @@
 NAME = hearl_parbor
-CC = g++
+CC = c++
 SRC = main.cpp\
 	Harl.cpp
 

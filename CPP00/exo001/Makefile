@@ -1,6 +1,6 @@
 
 NAME = phonebook
-CC = g++
+CC = c++
 SRC = \
 	main.cpp\
 	phonebook.cpp\

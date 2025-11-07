@@ -2,7 +2,7 @@
 
 Cat::Cat() : Animal()
 {
-	std::cout << "Cat construcotr called" << std::endl;
+	std::cout << "Cat constructor called" << std::endl;
 	_type = "Cat";
 	this->brain = new Brain();
 }
@@ -10,12 +10,12 @@ Cat::Cat() : Animal()
 Cat::~Cat()
 {
 	delete this->brain;
-	std::cout << "Cat destrucor called" << std::endl;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &other) : Animal()
+Cat::Cat(const Cat &other) : Animal(), brain(NULL)
 {
-	std::cout << "Cat copy construcotr called" << std::endl;
+	std::cout << "Cat copy constructor called" << std::endl;
 	*this = other;
 }
 

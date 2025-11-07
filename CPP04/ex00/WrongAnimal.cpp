@@ -13,7 +13,7 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other)
 {
-	std::cout << "WrongAnimal copy construcotr called" << std::endl;
+	std::cout << "WrongAnimal copy constructor called" << std::endl;
 	*this = other;
 }
 

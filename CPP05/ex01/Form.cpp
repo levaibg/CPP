@@ -29,10 +29,10 @@ Form &Form::operator=(const Form &other)
 Form::Form(std::string name, int gradeTosign, int gradetoexecute) : _name(name), _gradeToSign(gradeTosign), _gradeToExecute(gradetoexecute)
 {
 	_signed = false;
-	 if (gradeTosign < 1 || gradetoexecute < 1)
-        throw GradeTooHighException();
-    if (gradeTosign > 150 || gradetoexecute > 150)
-        throw GradeTooLowException();
+	if (gradeTosign < 1 || gradetoexecute < 1)
+		throw GradeTooHighException();
+	if (gradeTosign > 150 || gradetoexecute > 150)
+		throw GradeTooLowException();
 }
 
 void Form::beSigned(Bureaucrat &b)

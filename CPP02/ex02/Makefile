@@ -1,5 +1,5 @@
 NAME = Fixed
-CC = g++
+CC = c++
 SRC = main.cpp\
 	Fixed.cpp
 

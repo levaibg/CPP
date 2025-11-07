@@ -1,0 +1,13 @@
+#include "ScalarConverter.hpp"
+
+
+int main(int ac, char **av)
+{	
+	if(ac != 2)
+	{
+		std::cout << " Error : wrong format should be :  [" << av[0] << "] [argument] " << std::endl;
+		return(0);
+	}	
+	ScalarConverter::converting(av[1]);
+	
+}
