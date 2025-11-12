@@ -6,6 +6,7 @@ SRC = main.cpp\
 	PresidentialPardonForm.cpp\
 	RobotomyRequestForm.cpp\
 	ShrubberyCreationForm.cpp\
+	Intern.cpp
 
 CFLAGS = -Werror -Wall -Wextra -std=c++98
 

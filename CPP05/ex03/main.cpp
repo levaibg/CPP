@@ -2,6 +2,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 #include <iostream>
 
 int main()
@@ -30,6 +31,9 @@ int main()
     high.signForm(pres);
     low.executeForm(pres);
     high.executeForm(pres);
-
-    return 0;
+	Intern Tourpalv;
+	AForm* rrf;
+	rrf = Tourpalv.makeForm("RobotomyRequestForm", "Bender");
+    
+	return 0;
 }
