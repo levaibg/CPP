@@ -16,8 +16,6 @@ public:
 	Bureaucrat &operator=(const Bureaucrat &other);
 	std::string getName() const;
 	int getGrade() const;
-	// void GradeTooHighException();
-	// void GradeTooLowException();
 	void incrementGrade();
 	void decrementGrade();
 
