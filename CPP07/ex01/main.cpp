@@ -1,6 +1,6 @@
 #include "iter.hpp"
 
-void	funct(int a)
+void	funct(const int &a)
 {
 	std::cout << "Fonction !" << a << std::endl;
 }
