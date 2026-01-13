@@ -2,22 +2,22 @@
 #include "Weapon.hpp"
 
 
-// void    HumanA::attack()
+// void	HumanA::attack()
 // {
-//     std::cout << name << 
+//	 std::cout << name << 
 // }
 
 HumanA::HumanA(std::string name, Weapon &WeaponssA) : _name(name), _WeaponA(WeaponssA)
 {
-    
+	
 }
 
 HumanA::~HumanA()
 {
-    
+	
 }
 
-void    HumanA::attack()
+void	HumanA::attack()
 {
-    std::cout << _name << " attacks with their " << _WeaponA.getType() << std::endl;  
+	std::cout << _name << " attacks with their " << _WeaponA.getType() << std::endl;  
 }

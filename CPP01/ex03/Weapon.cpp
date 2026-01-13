@@ -6,22 +6,22 @@ Weapon::Weapon(std::string typew) : _type(typew)
 }
 Weapon::Weapon()
 {
-    
+	
 }
 
 
 Weapon::~Weapon()
 {
-    
+	
 }
 
 const std::string Weapon::getType(void)
 {
-    return(_type);
+	return(_type);
 }
 
 
-void    Weapon::setType(std::string str)
+void	Weapon::setType(std::string str)
 {
-    _type = str;
+	_type = str;
 }

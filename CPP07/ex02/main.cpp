@@ -56,7 +56,7 @@ int main(int, char**)
 	// {
 	// 	std::cout << "i = "<< i << "   " << numbers[i] << std::endl;
 	// }
-    // std::cout << "size = " << numbers.size() << std::endl;
+	// std::cout << "size = " << numbers.size() << std::endl;
 
 	delete [] mirror;
 	return 0;

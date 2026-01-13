@@ -13,13 +13,13 @@ HumanB::~HumanB()
 {
 }
 
-void    HumanB::setWeapon(Weapon &w)
+void	HumanB::setWeapon(Weapon &w)
 {
-    _WeaponB = &w;
+	_WeaponB = &w;
 }
 
 
-void    HumanB::attack()
+void	HumanB::attack()
 {
 	
 	if (!_WeaponB)
@@ -27,5 +27,5 @@ void    HumanB::attack()
 		std::cout << "Error no weapon" << std::endl;
 		return;
 	}
-    std::cout << _nameb << " attacks with their " << _WeaponB->getType() << std::endl;  
+	std::cout << _nameb << " attacks with their " << _WeaponB->getType() << std::endl;  
 }

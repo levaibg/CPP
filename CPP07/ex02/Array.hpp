@@ -56,7 +56,7 @@ public:
 	}
 
 	unsigned int size() const
-	{
+	{_len
 		return _len;
 	}
 };

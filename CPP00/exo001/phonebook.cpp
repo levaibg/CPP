@@ -2,19 +2,19 @@
 
 phonebook::phonebook()
 {
-    j = 0;
-    counter = 0;
+	j = 0;
+	counter = 0;
 }
 phonebook::~phonebook()
 {
 
 }
 
-void    phonebook::add_info(void)
+void	phonebook::add_info(void)
 {   
 	if(j < 8)
 		j++;
-    contacte[counter % 8].add_phb();
+	contacte[counter % 8].add_phb();
 	counter++;
 }
 
@@ -50,23 +50,23 @@ std::string		phonebook::print_string(int i, int inf)
 
 
 
-void    phonebook::display_data(void)
+void	phonebook::display_data(void)
 {
-    std::string str;
-    if(j == 0)
-    {
-        std::cout << "No info in database" << std::endl;
-        return;
-    }
-    else
-    {
-        std::cout << "---------------------------------------------" << std::endl;
-        std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-        std::cout << "---------------------------------------------" << std::endl;
+	std::string str;
+	if(j == 0)
+	{
+		std::cout << "No info in database" << std::endl;
+		return;
+	}
+	else
+	{
+		std::cout << "---------------------------------------------" << std::endl;
+		std::cout << "|	 Index|First Name| Last Name|  Nickname|" << std::endl;
+		std::cout << "---------------------------------------------" << std::endl;
 
-    }
-    for(int i = 0; i < j; i++)
-    {
+	}
+	for(int i = 0; i < j; i++)
+	{
 		std::string str;
 		std::cout << "|" << std::setw(10) << i << "|";
 		std::cout << std::setw(10) << print_string(i, 0) << "|";
@@ -74,10 +74,10 @@ void    phonebook::display_data(void)
 		std::cout << std::setw(10) << print_string(i, 2) << "|";
 		std::cout << std::endl;
 		std::cout << "---------------------------------------------" << std::endl;
-    }
+	}
 	std::cout << std::endl;
-    std::cout << "Choose an index"<< std::endl;
-    std::getline(std::cin, str);
+	std::cout << "Choose an index"<< std::endl;
+	std::getline(std::cin, str);
 	if(!std::cin)
 	{
 		std::cout << "Crtl D" << std::endl;

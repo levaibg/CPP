@@ -16,7 +16,8 @@ class ScalarConverter
 	ScalarConverter(const ScalarConverter &other);
 	ScalarConverter &operator=(const ScalarConverter &other);
 
-	static void converting(char *str1);
+	static void convert(const std::string& str);
 	static int	is_print(int s);
+	static bool check(const std::string& str);
 
 };

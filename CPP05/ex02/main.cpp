@@ -6,30 +6,30 @@
 
 int main()
 {
-    Bureaucrat high("Alice", 1);
-    Bureaucrat low("Bob", 150);
+	Bureaucrat high("Alice", 1);
+	Bureaucrat low("Bob", 150);
 
-    ShrubberyCreationForm shrub("garden");
-    RobotomyRequestForm robo("Bender");
-    // PresidentialPardonForm pres("Ford Prefect");
+	ShrubberyCreationForm shrub("garden");
+	RobotomyRequestForm robo("Bender");
+	PresidentialPardonForm pres("kennedy");
 
-    std::cout << "\n--- Test Shrubbery ---" << std::endl;
-    low.signForm(shrub);
-    high.signForm(shrub);
-    low.executeForm(shrub);
-    high.executeForm(shrub);
+	std::cout << "\n--- Test Shrubbery ---" << std::endl;
+	low.signForm(shrub);
+	high.signForm(shrub);
+	low.executeForm(shrub);
+	high.executeForm(shrub);
 
-    std::cout << "\n--- Test Robotomy ---" << std::endl;
-    high.signForm(robo);
-    high.executeForm(robo);
-    high.executeForm(robo);
-    high.executeForm(robo);
+	std::cout << "\n--- Test Robotomy ---" << std::endl;
+	high.signForm(robo);
+	high.executeForm(robo);
+	high.executeForm(robo);
+	high.executeForm(robo);
 
-    // std::cout << "\n--- Test Presidential ---" << std::endl;
-    // low.signForm(pres);
-    // high.signForm(pres);
-    // low.executeForm(pres);
-    // high.executeForm(pres);
+	std::cout << "\n--- Test Presidential ---" << std::endl;
+	low.signForm(pres);
+	high.signForm(pres);
+	low.executeForm(pres);
+	high.executeForm(pres);
 
-    return 0;
+	return 0;
 }

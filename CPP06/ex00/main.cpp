@@ -8,6 +8,6 @@ int main(int ac, char **av)
 		std::cout << " Error : wrong format should be :  [" << av[0] << "] [argument] " << std::endl;
 		return(0);
 	}	
-	ScalarConverter::converting(av[1]);
+	ScalarConverter::convert(av[1]);
 	
 }

@@ -7,24 +7,18 @@ Form::Form() : _name("gilbert"), _gradeToSign(22), _gradeToExecute(12)
 
 Form::~Form() {}
 
-Form::Form(const Form &other)
+Form::Form(const Form &other) : _name(other._name), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute)
 {
-	std::cout << "Form Copy construcor called" << std::endl;
 	*this = other;
 }
 
 Form &Form::operator=(const Form &other)
 {
-	std::cout << "Form copy operator called" << std::endl;
-
 	if (this != &other)
-	{
 		this->_signed = other._signed;
-		this->_gradeToSign = other._gradeToSign;
-		this->_gradeToExecute = other._gradeToExecute;
-	}
-	return (*this);
+	return *this;
 }
+
 
 Form::Form(std::string name, int gradeTosign, int gradetoexecute) : _name(name), _gradeToSign(gradeTosign), _gradeToExecute(gradetoexecute)
 {
@@ -37,7 +31,7 @@ Form::Form(std::string name, int gradeTosign, int gradetoexecute) : _name(name),
 
 void Form::beSigned(Bureaucrat &b)
 {
-	if (b.getGrade() >= this->_gradeToExecute)
+	if (b.getGrade() >= this->_gradeToSign)
 		throw(GradeTooLowException());
 	this->_signed = true;
 }

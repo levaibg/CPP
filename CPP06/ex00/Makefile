@@ -3,7 +3,7 @@ CC = c++
 SRC = main.cpp\
 	ScalarConverter.cpp\
 
-CFLAGS = -Werror -Wall -Wextra -std=c++98
+CFLAGS = -Werror -Wall -Wextra -std=c++98 -g
 
 OBJ = $(SRC:.cpp=.o)
 

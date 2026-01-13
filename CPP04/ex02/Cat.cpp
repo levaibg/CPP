@@ -29,12 +29,12 @@ Cat::Cat(const Cat &other) : AAnimal(), brain(NULL)
 Cat &Cat::operator=(const Cat &other)
 {
 	if (this != &other)
-    {
-        _type = other._type;
-        if (this->brain)
-            delete this->brain;
-        this->brain = new Brain(*other.brain);
-    }
+	{
+		_type = other._type;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
+	}
 	return(*this);
 }
 

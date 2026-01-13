@@ -1,35 +1,27 @@
 #pragma once
+
 #include "AForm.hpp"
 #include <fstream>
-#include <string>
+#include "Bureaucrat.hpp"
 
-
-
-class ShrubberyCreationForm :  public AForm
+class ShrubberyCreationForm : public AForm
 {
-	private:
-	std::string _name;
-	int _gradeToSign;
-	int _gradeToExecute;
+	private : 
+		std::string _target;
 
 	public :
-		ShrubberyCreationForm();
-		ShrubberyCreationForm(std::string name);
-		~ShrubberyCreationForm();
-		ShrubberyCreationForm(const ShrubberyCreationForm &other);
-		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
-		void	execute();
-		void	makefile();
-
-
-	class GradeTooHighException : public std::exception
+	ShrubberyCreationForm();
+	~ShrubberyCreationForm();
+	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(const ShrubberyCreationForm &other);
+	ShrubberyCreationForm &operator=(ShrubberyCreationForm const &other);
+	void execute(Bureaucrat const &executor)const;
+	std::string getTarget(void)const;
+	class FormNotSigned : public std::exception
 	{
-	public:
-		const char *what() const throw();
-	};
-	class GradeTooLowException : public std::exception
-	{
-	public:
-		const char *what() const throw();
+		public:
+			const char *what() const throw();
 	};
 };
+
+std::ostream	&operator<<(std::ostream &os, ShrubberyCreationForm *a);

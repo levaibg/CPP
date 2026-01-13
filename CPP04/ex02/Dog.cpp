@@ -20,13 +20,13 @@ Dog::Dog(const Dog &other) : AAnimal(), brain(NULL)
 Dog& Dog::operator=(const Dog &other)
 {
 	 if (this != &other)
-    {
-        _type = other._type;
-        if (this->brain)
-            delete this->brain;
-        this->brain = new Brain(*other.brain);
-    }
-    return *this;
+	{
+		_type = other._type;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
+	}
+	return *this;
 }
 
 

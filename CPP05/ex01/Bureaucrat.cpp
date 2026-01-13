@@ -1,24 +1,23 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("george"), _grade(15)
+Bureaucrat::Bureaucrat() : _name("George"), _grade(120)
 {
-	this->_grade = 120;
-	std::cout << "Base operatror called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Base destrucotr called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
-Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name("nick")
+
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade)
 {
-	std::cout << "Bureaucrat copy construcort called" << std::endl;
-	*this = other;
+	std::cout << "Copy constructor called" << std::endl;
 }
+
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
-	std::cout << "Name construcotr called" << std::endl;
-
+	std::cout << "Parametric constructor called" << std::endl;
 	if (grade < 1)
 		throw GradeTooHighException();
 	else if (grade > 150)
@@ -27,22 +26,23 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
-	std::cout << "copy operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
 		this->_grade = other._grade;
-	return (*this);
+	return *this;
 }
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)
 {
 	os << other.getName() << ", bureaucrat grade " << other.getGrade();
-	return (os);
+	return os;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "Grade too high";
 }
+
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "Grade too low";
@@ -64,12 +64,12 @@ void Bureaucrat::decrementGrade()
 
 std::string Bureaucrat::getName() const
 {
-	return (this->_name);
+	return this->_name;
 }
 
 int Bureaucrat::getGrade() const
 {
-	return (this->_grade);
+	return this->_grade;
 }
 
 void Bureaucrat::signForm(Form &f)

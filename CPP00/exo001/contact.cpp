@@ -7,24 +7,24 @@
 
 // contact::contact()
 // {
-//     name = "";
-//     firstname = "";
+//	 name = "";
+//	 firstname = "";
 // }
 // contact::~contact()
 // {
-//     std::cout << "destrufted"<< std::endl;
+//	 std::cout << "destrufted"<< std::endl;
 // }
-std::string    contact::setname(std::string str)
+std::string	contact::setname(std::string str)
 {
-    return(str);
+	return(str);
 }
 
 
 
-void    contact::add_phb(void)
+void	contact::add_phb(void)
 {
-    std::cout << "First name" << std::endl;
-    std::getline(std::cin,firstname);
+	std::cout << "First name" << std::endl;
+	std::getline(std::cin,firstname);
 	if(!std::cin)
 	{
 		std::cout << "Crtl D" << std::endl;
@@ -42,14 +42,14 @@ void    contact::add_phb(void)
 		if(!firstname.empty())
 			break;
 	}
-    std::cout << "Last name" << std::endl;
-    std::getline(std::cin,lastname);
+	std::cout << "Last name" << std::endl;
+	std::getline(std::cin,lastname);
 		if(!std::cin)
 	{
 		std::cout << "Crtl D" << std::endl;
 		exit(1);
 	}
-    while(lastname.empty())
+	while(lastname.empty())
 	{
 		
 		std::cout << "wrong anwser"<<std::endl;
@@ -69,7 +69,7 @@ void    contact::add_phb(void)
 		std::cout << "Crtl D" << std::endl;
 		exit(1);
 	}
-    while(nickname.empty())
+	while(nickname.empty())
 	{
 		std::cout << "wrong anwser"<<std::endl;
 		if(!std::cin)
@@ -82,8 +82,8 @@ void    contact::add_phb(void)
 			break;
 	}
 	std::cout << "phone number" << std::endl;
-    std::getline(std::cin,phonnumber);
-    	if(!std::cin)
+	std::getline(std::cin,phonnumber);
+		if(!std::cin)
 	{
 		std::cout << "Crtl D" << std::endl;
 		exit(1);
@@ -101,8 +101,8 @@ void    contact::add_phb(void)
 			break;
 	}
 	std::cout << "darkest secrect" << std::endl;
-    std::getline(std::cin,darkest_secrect);
-    	if(!std::cin)
+	std::getline(std::cin,darkest_secrect);
+		if(!std::cin)
 	{
 		std::cout << "Crtl D" << std::endl;
 		exit(1);

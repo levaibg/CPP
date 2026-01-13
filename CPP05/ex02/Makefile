@@ -1,13 +1,13 @@
-NAME = Bureaucrat
+NAME = harder
 CC = c++
 SRC = main.cpp\
 	Bureaucrat.cpp\
-	AForm.cpp
+	AForm.cpp\
 	PresidentialPardonForm.cpp\
 	RobotomyRequestForm.cpp\
-	ShubberyCreationForm.cpp\
+	ShrubberyCreationForm.cpp\
 
-CFLAGS = -Werror -Wall -Wextra -std=c++98
+CFLAGS = -Werror -Wall -Wextra -std=c++98 -g
 
 OBJ = $(SRC:.cpp=.o)
 
