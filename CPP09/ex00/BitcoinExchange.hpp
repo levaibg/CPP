@@ -15,15 +15,21 @@
 
 class Bitcoin
 {
-    private:
-    std::map<std::string, float> _rates;
+	private:	
+	std::map<std::string, float> _rates;
+	// float _year;
+	// float _month;
+	// float _day;
 
-    public : 
-    Bitcoin();
-    ~Bitcoin();
-    Bitcoin &operator=(Bitcoin const &other);
-    Bitcoin(const Bitcoin &other);
-    void    checkFile(std::string infile);
-    void    openCsv(void);
+
+	public :	
+	Bitcoin();
+	~Bitcoin();
+	Bitcoin &operator=(Bitcoin const &other);
+	Bitcoin(const Bitcoin &other);
+	void	checkFile(std::string infile);
+	void	openCsv(void);
+	int	checkvalue(std::string str);
+
    
 };
